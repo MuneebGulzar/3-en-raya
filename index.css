@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90vw;
+    height: 50vh;
+    box-shadow: 0 0 .5rem lightgray;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container:hover{
+    cursor: pointer;
+}
+.container div{
+    width: 33.33%;
+    height: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.border-right{
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    border-right: .2rem solid #000 !important;
+}
+.border-bottom-top{
+    border-left: none;
+    border-right: none;
+    border-bottom: .2rem solid #000;
+    border-top: .2rem solid #000;
+}
+
+.win{
+    background-color: green;
+    color: #fff;
+}
+.border-top-left{
+    border-top-left-radius: 1rem;
+}
+.border-top-right{
+    border-top-right-radius: 1rem;
+}
+.border-bottom-left{
+    border-bottom-left-radius: 1rem;
+}
+.border-bottom-right{
+    border-bottom-right-radius: 1rem;
+}
+@media screen and (min-width: 768px){
+    .container{
+        width: 50vw;
+    }
+}
