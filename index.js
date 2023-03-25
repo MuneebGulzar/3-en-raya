@@ -14,7 +14,7 @@ function clickDiv() {
 
     if (this.innerText === 'O' || this.innerText === 'X') {
         alert("Error!!!");
-    } else if (this.innerText === '') {
+    } else {
 
         if (writeX) {
             this.innerText = 'X';
