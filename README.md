@@ -1,2 +1,3 @@
 # Tic Tac Toe game
-DEMO [https://muneebgulzar.github.io/3-en-raya/]
+## DEMO
+[Let`s play][https://muneebgulzar.github.io/3-en-raya/](https://muneebgulzar.github.io/3-en-raya/)
