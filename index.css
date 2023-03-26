@@ -10,7 +10,6 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,10 +46,29 @@ body{
     border-bottom: .2rem solid #000;
     border-top: .2rem solid #000;
 }
-
+.classX{
+    color: red;
+}
+.classO{
+    color: green;
+}
+.error{
+    color: red;
+    width: 90vw;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-block: 1rem;
+    box-shadow: 0 0 .5rem lightgrey;
+}
 .win{
-    background-color: green;
-    color: #fff;
+    color: green;
+    width: 90vw;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-block: 1rem;
+    box-shadow: 0 0 .5rem lightgrey;
 }
 .border-top-left{
     border-top-left-radius: 1rem;
@@ -68,11 +86,14 @@ a{
     text-decoration: none;
     color: lightgray;
 }
+
 footer{
     margin-top: 3vh;
 }
 @media screen and (min-width: 768px){
-    .container{
+    .container, .error,  #isWinner{
         width: 50vw;
     }
 }
+
+/**/

@@ -5,19 +5,23 @@ window.onload = function () {
         element.onclick = clickDiv;
 
     });
+
 }
-nodes = document.querySelectorAll('.container div');
+let nodes = document.querySelectorAll('.container div');
 index = Array.from(nodes).indexOf(this);
 writeX = true;
 writeO = true;
 function clickDiv() {
-
+    let errorNode = document.querySelector(`div#error`);
     if (this.innerText === 'O' || this.innerText === 'X') {
-        alert("Error!!!");
+        errorNode.innerText = 'Error!';
+        errorNode.classList.add('error');
     } else {
-
+        errorNode.innerText = '';
+        errorNode.classList.remove('error');
         if (writeX) {
             this.innerText = 'X';
+            this.classList.add('classX');
             console.log('He escrito X');
             writeX = false;
             writeO = true;
@@ -25,6 +29,7 @@ function clickDiv() {
 
         } else if (writeO) {
             this.innerText = 'O';
+            this.classList.add('classO');
             console.log('He escrito O');
             writeO = false;
             writeX = true;
@@ -34,124 +39,113 @@ function clickDiv() {
 }
 
 function winX() {
-
+    let node = document.querySelector(`div#isWinner`);
 
     if (nodes[0].innerText === 'X' && nodes[4].innerText === 'X' && nodes[8].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[0].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[8].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[0].innerText === 'X' && nodes[1].innerText === 'X' && nodes[2].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[0].classList.add('win');
-        nodes[1].classList.add('win');
-        nodes[2].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[0].innerText === 'X' && nodes[3].innerText === 'X' && nodes[6].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[0].classList.add('win');
-        nodes[3].classList.add('win');
-        nodes[6].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[1].innerText === 'X' && nodes[4].innerText === 'X' && nodes[7].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[1].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[7].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[3].innerText === 'X' && nodes[4].innerText === 'X' && nodes[5].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[3].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[5].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[2].innerText === 'X' && nodes[5].innerText === 'X' && nodes[8].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[2].classList.add('win');
-        nodes[5].classList.add('win');
-        nodes[8].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[2].innerText === 'X' && nodes[4].innerText === 'X' && nodes[6].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[2].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[6].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[6].innerText === 'X' && nodes[7].innerText === 'X' && nodes[8].innerText === 'X') {
-        alert(`Gana X`);
-        nodes[6].classList.add('win');
-        nodes[7].classList.add('win');
-        nodes[8].classList.add('win');
+        node.innerText = 'Gana X';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     }
 }
 
 function winO() {
+    let node = document.querySelector(`div#isWinner`);
 
     if (nodes[0].innerText === 'O' && nodes[4].innerText === 'O' && nodes[8].innerText === 'O') {
-        alert(`Gana O`);
-        nodes[0].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[8].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[0].innerText === 'O' && nodes[1].innerText === 'O' && nodes[2].innerText === 'O') {
-        alert(`Gana O`);
-        nodes[0].classList.add('win');
-        nodes[1].classList.add('win');
-        nodes[2].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[0].innerText === 'O' && nodes[3].innerText === 'O' && nodes[6].innerText === 'O') {
-        alert(`Gana X`);
-        nodes[0].classList.add('win');
-        nodes[3].classList.add('win');
-        nodes[6].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[1].innerText === 'O' && nodes[4].innerText === 'O' && nodes[7].innerText === 'O') {
-        alert(`Gana O`);
-        nodes[1].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[7].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[3].innerText === 'O' && nodes[4].innerText === 'O' && nodes[5].innerText === 'O') {
-        alert(`Gana O`);
-        nodes[3].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[5].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[2].innerText === 'O' && nodes[5].innerText === 'O' && nodes[8].innerText === 'O') {
-        alert(`Gana O`);
-        nodes[2].classList.add('win');
-        nodes[5].classList.add('win');
-        nodes[8].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[2].innerText === 'O' && nodes[4].innerText === 'O' && nodes[6].innerText === 'O') {
-        alert(`Gana O`);
-        nodes[2].classList.add('win');
-        nodes[4].classList.add('win');
-        nodes[6].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     } else if (nodes[6].innerText === 'O' && nodes[7].innerText === 'O' && nodes[8].innerText === 'O') {
-        alert(`Gana O`);
-        nodes[6].classList.add('win');
-        nodes[7].classList.add('win');
-        nodes[8].classList.add('win');
+        node.innerText = 'Gana O';
+        node.classList.add('win')
         writeX = false;
         writeO = false;
     }
 }
+/*
+
+Combinaciones Win:
+
+1. 0, 4, 8
+2. 0, 1, 2
+3. 0, 3, 6
+4. 1, 4, 7
+5. 3, 4, 5
+6. 2, 5, 8
+7, 2, 4, 6
+8. 6, 7, 8
+
+*/
+
+/* function isWinner() {
+    const combinacionesWin = [[0, 4, 8], [0, 1, 2], [0, 3, 6], [1, 4, 7], [3, 4, 7], [2, 5, 8], [2, 4, 6], [6, 7, 8]];
+
+}
+isWinner(); */
